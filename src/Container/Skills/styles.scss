@@ -1,0 +1,144 @@
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-left: 24px;
+}
+
+.skills-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.skills-CategoryTitle {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--yellow-theme-sub-text-color);
+  margin-top: 20px;
+  border-bottom: 2px solid var(--yellow-theme-main-color);
+  display: inline-block;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  width: fit-content;
+}
+
+.skills-CategoryTitle::before,
+.skills-CategoryTitle::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  flex: 1;
+  height: 3px;
+  background-color: var(--yellow-theme-main-color);
+  bottom: 300px;
+  
+}
+
+ .skills-CategoryTitle::before {
+  right: 967px;
+  
+}
+
+.skills-CategoryTitle::after {
+  left: 0.1px;
+}
+
+.skills-Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1px));
+  gap: 19.5rem;
+  padding-top: 2rem;
+}
+
+.skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+  width: 250px;
+}
+
+.skill-circle .CircularProgressbar-text {
+  text-anchor: middle;
+}
+
+.skill-circle:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.skill-Label {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin: 0;
+  color: var(--yellow-theme-main-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .skills-wrapper {
+    margin-left: 0;
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  .skills-category {
+    gap: 3rem;
+  }
+
+  .skills-CategoryTitle {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 15px;
+    display: block;
+    position: relative;
+    padding: 0 1.3rem;
+    width: fit-content;
+    flex: 1;
+  
+  }
+  .skills-CategoryTitle::before,
+  .skills-CategoryTitle::after {
+    position:absolute;
+    content: "";
+    width: 2px;
+    height: 2px;
+    background-color: var(--yellow-theme-main-color);
+    bottom: 0;
+
+  
+  }
+
+    .skills-CategoryTitle::before {
+  right: 0;
+}
+
+.skills-CategoryTitle::after {
+  left: 0;
+}
+
+  .skills-Grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding-top: 1rem;
+  }
+
+  .skill-circle {
+    width: 120px;
+    padding: 0.5rem;
+  }
+
+  .skill-Label {
+    font-size: 1rem;
+  }
+}

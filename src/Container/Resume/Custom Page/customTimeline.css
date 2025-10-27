@@ -1,0 +1,107 @@
+/* src/Container/Resume/CustomTimeline.css */
+
+.custom-timeline {
+  position: relative;
+  padding-left: 1rem;
+}
+
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 5.5rem;
+  
+}
+
+
+
+.timeline-content {
+  background: #0f0f0f;
+  width: 500px;
+  height: 130px;
+  padding: 2rem;
+  border: 1px solid var(--yellow-theme-main-color);
+  border-radius: 4px;
+  margin-left: 5.5rem;
+  line-height: 17PX;
+  margin: 0 auto;
+ 
+}
+.timeline-content h3 {
+  margin: 0 0 0.8rem;
+  color: var(--yellow-theme-main-color);
+  font-size: 1.6rem;
+
+}
+.timeline-content h4,
+.timeline-content h5 {
+  margin: 0;
+  color: #fffcfc;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.timeline-content p {
+  margin-top: 0.2rem;
+  color: #fffcfc;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .custom-timeline {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  display: block;
+  margin: 0;
+  
+}
+  
+
+  
+
+  .timeline-item {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem; /* slightly tighter for mobile */
+    
+  }
+
+ 
+
+  .timeline-content {
+    background: #0f0f0f;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    margin: 0 auto;
+    border: 1px solid var(--yellow-theme-main-color);
+    border-radius: 4px;
+    line-height: 1.6rem;
+  }
+
+  .timeline-content h3 {
+    margin: 0 0 0.8rem;
+    color: var(--yellow-theme-main-color);
+    font-size: 1.3rem;
+    
+  }
+
+  .timeline-content h4,
+  .timeline-content h5 {
+    margin: 0;
+    color: #fffcfc;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .timeline-content p {
+    margin-top: 0.5rem;
+    color: #fffcfc;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
