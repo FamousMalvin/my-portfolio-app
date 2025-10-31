@@ -9,7 +9,7 @@ const Home = () => {
     navigate("/Contact");
   };
   return (
-    <section id="home" class="home">
+    <section id="home" className="home">
       <div class="homeText-Wrapper">
         <h1>
           Hello, I'm Malvin
