@@ -29,7 +29,7 @@
     }
 
     &_header-text::after {
-      right: 958px;
+      right: 956px;
     }
 
     &_form {
@@ -73,11 +73,10 @@
             outline: none;
           }
           .inputName:focus + .nameLabel,
-          .inputName:valid + .nameLabel, 
+          .inputName:valid + .nameLabel,
           .inputEmail:focus + .emailLabel,
           .inputEmail:valid + .emailLabel,
-            .inputDescription:focus
-            + .descriptionLabel,
+          .inputDescription:focus + .descriptionLabel,
           .inputDescription:valid + .descriptionLabel {
             font-size: 18px;
             top: -25px;
@@ -86,16 +85,16 @@
         }
       }
     }
-    button{
+    button {
       cursor: pointer;
       padding: 10px 70px;
       background-color: transparent;
       color: var(--yellow-theme-main-color);
-      border:1px solid var(--yellow-theme-main-color);
+      border: 1px solid var(--yellow-theme-main-color);
       border-radius: 4px;
       font-weight: 500;
 
-      &:hover{
+      &:hover {
         color: black;
         background-color: var(--yellow-theme-main-color);
       }
@@ -103,30 +102,23 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
   .contact {
     &_content {
       padding: 15px; // smaller padding for mobile
-    
 
       &_header-text {
         font-size: 18px; // reduce font size a bit
         text-align: center; // center text on small screens
-        
       }
 
-     
+      &_header-text::before {
+        right: 0;
+      }
 
-    &_header-text::before {
-      right: 0;
-    }
-
-    &_header-text::after {
-      left: 122px;
-      
-    }
-
+      &_header-text::after {
+        left: 122px;
+      }
 
       &_form {
         margin-top: 35px;
@@ -144,27 +136,24 @@
               font-size: 14px; // input text adjusts
               margin-top: 3px;
               position: relative;
-              
             }
 
             .nameLabel,
             .emailLabel,
             .descriptionLabel {
               font-size: 13px; // smaller label font
-
             }
 
-             .inputName:focus + .nameLabel,
-          .inputName:valid + .nameLabel, 
-          .inputEmail:focus + .emailLabel,
-          .inputEmail:valid + .emailLabel,
-            .inputDescription:focus
-            + .descriptionLabel,
-          .inputDescription:valid + .descriptionLabel {
-            font-size: 13px;
-            top: -17px;
-            left: 1px;
-          }
+            .inputName:focus + .nameLabel,
+            .inputName:valid + .nameLabel,
+            .inputEmail:focus + .emailLabel,
+            .inputEmail:valid + .emailLabel,
+            .inputDescription:focus + .descriptionLabel,
+            .inputDescription:valid + .descriptionLabel {
+              font-size: 13px;
+              top: -17px;
+              left: 1px;
+            }
           }
         }
       }
