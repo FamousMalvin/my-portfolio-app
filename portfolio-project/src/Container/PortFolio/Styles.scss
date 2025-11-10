@@ -1,0 +1,258 @@
+.portfolio {
+  .portFolio-content {
+    padding: 20px;
+    width: 100%;
+
+    .portFolio-content-filter {
+      display: inline-block;
+      margin: 0 auto;
+      border-radius: 28px;
+      border: none;
+
+      li {
+        font-size: 15px;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        color: var(--yellow-theme-main-color);
+        padding: 14px 16px;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: all 0.5s ease;
+
+        &.active {
+          font-weight: 600;
+          background: var(--yellow-theme-main-color);
+          color: var(--yellow-theme-sub-text-color);
+          border-radius: 35px;
+        }
+      }
+    }
+    .portFolio-content-Cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      margin-top: 10px;
+
+      .portFolio-content-Cards-item {
+        position: relative;
+        cursor: pointer;
+        height: 360px;
+
+        &:hover .overlay {
+          opacity: 1;
+        }
+
+        .portFolio-content-Cards-item-wrapper {
+          height: 100%;
+          border-radius: 12px;
+
+          a {
+            height: 100%;
+
+            img {
+              height: inherit;
+              object-fit: cover;
+              border-radius: 5px;
+              width: 100%;
+            }
+          }
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: var(--yellow-theme-main-color);
+
+          div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            p {
+              color: black;
+              margin: 0px;
+              font-size: 4rem;
+              position: relative;
+              overflow: hidden;
+              white-space: nowrap;
+              font-weight: 600;
+              font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+              animation: typingEffect 1s steps(30, end);
+            }
+
+            button {
+              cursor: pointer;
+              margin-top: 16px;
+              padding: 10px 70px;
+              font-size: 2.5rem;
+              background: transparent;
+              color: var(--yellow-theme-sub-text-color);
+              border: 1.5px solid black;
+              border-radius: 1rem;
+              font-weight: 600;
+            }
+            button:hover {
+              background-color: rgb(36, 35, 35);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* General mobile adjustments for screens up to 480px wide */
+@media only screen and (max-width: 480px) {
+  .portfolio {
+    .portFolio-content {
+      padding: 10px; /* Reduce padding for smaller screens */
+      width: 100%;
+
+      .portFolio-content-filter {
+        display: inline-block; /* Change to block to stack filter items */
+        text-align: center; /* Center the filter items */
+        margin: 0; /* Add some bottom margin */
+        border: none;
+
+        li {
+          font-size: 11px; /* Slightly smaller font for filter items */
+          display: inline-block; /* Stack items vertically */
+          margin: 0 1px; /* Add space between stacked items */
+          padding: 10px 10px; /* Adjust padding for touch targets */
+          border-radius: 20px; /* Maintain rounded corners */
+
+          &.active {
+            font-weight: 600;
+            background: var(--yellow-theme-main-color);
+            color: var(--yellow-theme-sub-text-color);
+            border-radius: 25px; /* Adjust border-radius */
+          }
+        }
+      }
+
+      .portFolio-content-Cards {
+        /* Change to a single column layout for mobile */
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px; /* Adjust gap between cards */
+        margin-top: 20px; /* Ensure sufficient space from filter */
+
+        .portFolio-content-Cards-item {
+          height: 100%; /* Adjust height for mobile card items */
+
+          .overlay {
+            /* Adjust overlay text and button for mobile */
+            div {
+              p {
+                font-weight: 600;
+                font-size: 2rem; /* Smaller font for title in overlay */
+                white-space: none; /* Allow text to wrap */
+                padding: 0 10px; /* Add horizontal padding */
+                animation: typingEffect 1s steps(30, end); /* Enable typing effect */
+              }
+
+              button {
+                padding: 8px 40px; /* Adjust button padding */
+                font-size: 1.5rem; /* Smaller font for button */
+                margin-top: 10px; /* Adjust margin */
+                cursor: pointer;
+                font-weight: 600;
+              }
+              button:hover {
+                background-color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* General mobile adjustments for screens up to 480px wide */
+@media only screen and (min-width: 481px) and (max-width: 768px){
+  .portfolio {
+    .portFolio-content {
+      padding: 10px; /* Reduce padding for smaller screens */
+      width: 100%;
+
+      .portFolio-content-filter {
+        display: inline-block; /* Change to block to stack filter items */
+        text-align: center; /* Center the filter items */
+        margin: 0; /* Add some bottom margin */
+        border: none;
+
+        li {
+          font-size: 14px; /* Slightly smaller font for filter items */
+          display: inline-block; /* Stack items vertically */
+          margin: 0 4px; /* Add space between stacked items */
+          padding: 10px 12px; /* Adjust padding for touch targets */
+          border-radius: 20px; /* Maintain rounded corners */
+
+          &.active {
+            font-weight: 600;
+            background: var(--yellow-theme-main-color);
+            color: var(--yellow-theme-sub-text-color);
+            border-radius: 25px; /* Adjust border-radius */
+          }
+        }
+      }
+
+      .portFolio-content-Cards {
+        /* Change to a single column layout for mobile */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Adjust gap between cards */
+        margin-top: 20px; /* Ensure sufficient space from filter */
+
+        .portFolio-content-Cards-item {
+          height: 100%; /* Adjust height for mobile card items */
+
+          .overlay {
+            /* Adjust overlay text and button for mobile */
+            div {
+              p {
+                font-weight: 600;
+                font-size: 2.6rem; /* Smaller font for title in overlay */
+                white-space: none; /* Allow text to wrap */
+                padding: 0 10px; /* Add horizontal padding */
+                animation: typingEffect 1s steps(30, end); /* Enable typing effect */
+              }
+
+              button {
+                padding: 8px 40px; /* Adjust button padding */
+                font-size: 1.9rem; /* Smaller font for button */
+                margin-top: 10px; /* Adjust margin */
+                cursor: pointer;
+                font-weight: 600;
+              }
+              button:hover {
+                background-color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes typingEffect {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}

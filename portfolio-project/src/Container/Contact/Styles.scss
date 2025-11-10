@@ -1,0 +1,179 @@
+.contact {
+  &_content {
+    padding: 20px;
+
+    &_header-text {
+      color: val(--yellow-theme-main-color);
+      display: inline-block;
+      font-size: 22px;
+      color: var(--yellow-theme-sub-text-color);
+      font-weight: 700;
+      line-height: 1em;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-bottom: 2px solid var(--yellow-theme-main-color);
+    }
+    &_header-text::before,
+    &_header-text::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 5px;
+      background-color: var(--yellow-theme-main-color);
+      bottom: 2px;
+    }
+
+    &_header-text::before {
+      left: 0;
+    }
+
+    &_header-text::after {
+      right: 958px;
+    }
+
+    &_form {
+      margin-top: 30px;
+
+      &_controlsWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 30px;
+        margin-bottom: 30px;
+
+        div {
+          position: relative;
+
+          .inputName,
+          .inputEmail,
+          .inputDescription {
+            width: 100%;
+            border: 1.5px solid var(--yellow-theme-main-color);
+            padding: 16px 12px;
+            transition: all 0.5s ease;
+            position: relative;
+            color: var(--yellow-theme-sub-text-color);
+            background-color: transparent;
+            border-radius: 3px;
+          }
+          .nameLabel,
+          .emailLabel,
+          .descriptionLabel {
+            font-weight: 500;
+            position: absolute;
+            transition: all 0.2s ease;
+            font-size: 16px;
+            top: 7px;
+            left: 12px;
+            color: var(--yellow-theme-sub-text-color);
+          }
+          .inputName:focus,
+          .inputEmail:focus,
+          .inputDescription:focus {
+            outline: none;
+          }
+          .inputName:focus + .nameLabel,
+          .inputName:valid + .nameLabel, 
+          .inputEmail:focus + .emailLabel,
+          .inputEmail:valid + .emailLabel,
+            .inputDescription:focus
+            + .descriptionLabel,
+          .inputDescription:valid + .descriptionLabel {
+            font-size: 18px;
+            top: -25px;
+            left: 0px;
+          }
+        }
+      }
+    }
+    button{
+      cursor: pointer;
+      padding: 10px 70px;
+      background-color: transparent;
+      color: var(--yellow-theme-main-color);
+      border:1px solid var(--yellow-theme-main-color);
+      border-radius: 4px;
+      font-weight: 500;
+
+      &:hover{
+        color: black;
+        background-color: var(--yellow-theme-main-color);
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    &_content {
+      padding: 15px; // smaller padding for mobile
+    
+
+      &_header-text {
+        font-size: 18px; // reduce font size a bit
+        text-align: center; // center text on small screens
+        
+      }
+
+     
+
+    &_header-text::before {
+      right: 0;
+    }
+
+    &_header-text::after {
+      left: 122px;
+      
+    }
+
+
+      &_form {
+        margin-top: 35px;
+
+        &_controlsWrapper {
+          grid-template-columns: 1fr; // single column layout
+          gap: 20px; // smaller gap
+          margin-bottom: 20px;
+
+          div {
+            .inputName,
+            .inputEmail,
+            .inputDescription {
+              padding: 14px 10px; // slightly smaller padding
+              font-size: 14px; // input text adjusts
+              margin-top: 3px;
+              position: relative;
+              
+            }
+
+            .nameLabel,
+            .emailLabel,
+            .descriptionLabel {
+              font-size: 13px; // smaller label font
+
+            }
+
+             .inputName:focus + .nameLabel,
+          .inputName:valid + .nameLabel, 
+          .inputEmail:focus + .emailLabel,
+          .inputEmail:valid + .emailLabel,
+            .inputDescription:focus
+            + .descriptionLabel,
+          .inputDescription:valid + .descriptionLabel {
+            font-size: 13px;
+            top: -17px;
+            left: 1px;
+          }
+          }
+        }
+      }
+
+      button {
+        width: 100%; // button spans full width
+        padding: 12px;
+        font-size: 16px;
+      }
+    }
+  }
+}
