@@ -11,13 +11,8 @@ const personalDetails = [
   },
 
   {
-    label: "Age:",
-    value: "29",
-  },
-
-  {
     label: "Address:",
-    value: "Nigeria",
+    value: "Port-Harcourt, Nigeria",
   },
 
   {
@@ -32,7 +27,7 @@ const personalDetails = [
 ];
 
 const jobSummary =
-  "Aspiring Front-End Developer passionate about building user-friendly and visually engaging web experiences. Proficient in HTML, CSS, and JavaScript, with a growing expertise in React.js and Artificial Intelligence. Driven by curiosity, problem-solving, and a commitment for continuous learning, I strive to build seamless, responsive, and interactive web-apps and websites.";
+  "FrontEnd Developer passionate about building user-friendly and visually engaging web experiences. Proficient in HTML, CSS, and JavaScript, with a growing expertise in React.js and Artificial Intelligence. Driven by curiosity, problem-solving, and a commitment for continuous learning, I strive to build seamless, responsive, and interactive web-apps and websites.";
 
 const About = () => {
   return (
@@ -84,7 +79,7 @@ const About = () => {
           </Animate>
         </div>
         <div className="aboutContent-ServiceWrapper">
-        <Animate
+          <Animate
             play
             Duration={1.5}
             delay={1}
@@ -94,17 +89,16 @@ const About = () => {
             end={{
               transform: "translateX(0px)",
             }}
-        >
-        <div className="aboutContent-ServiceWrapper-InnerContent">
-    <img 
-      src="/famous-img.jpg" 
-      alt="famous img" 
-      style={{ width: "400px", height: "400px", borderRadius: "50%" }}
-    />
-  </div>
-         </Animate>
+          >
+            <div className="aboutContent-ServiceWrapper-InnerContent">
+              <img
+                src="/famous-img.jpg"
+                alt="famous img"
+                style={{ width: "400px", height: "400px", borderRadius: "50%" }}
+              />
+            </div>
+          </Animate>
         </div>
-       
       </div>
     </section>
   );

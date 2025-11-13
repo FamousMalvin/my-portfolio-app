@@ -11,11 +11,6 @@ const personalDetails = [
   },
 
   {
-    label: "Age:",
-    value: "29",
-  },
-
-  {
     label: "Address:",
     value: "Nigeria",
   },
@@ -32,7 +27,7 @@ const personalDetails = [
 ];
 
 const jobSummary =
-  "Aspiring Front-End Developer passionate about building user-friendly and visually engaging web experiences. Proficient in HTML, CSS, and JavaScript, with a growing expertise in React.js and Artificial Intelligence. Driven by curiosity, problem-solving, and a commitment for continuous learning, I strive to build seamless, responsive, and interactive web-apps and websites.";
+  "FrontEnd Developer passionate about building user-friendly and visually engaging web experiences. Proficient in HTML, CSS, and JavaScript, with a growing expertise in React.js and Artificial Intelligence. Driven by curiosity, problem-solving, and a commitment for continuous learning, I strive to build seamless, responsive, and interactive web-apps and websites.";
 
 const About = () => {
   return (

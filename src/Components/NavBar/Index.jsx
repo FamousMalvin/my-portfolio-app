@@ -44,6 +44,11 @@ const NavBar = () => {
   const handleToggleIcon = () => {
     setToggleIcon(!toggleIcon);
   };
+
+  // NEW FUNCTION: This function explicitly closes the menu.
+  const closeMenu = () => {
+    setToggleIcon(false);
+  };
   return (
     <div>
       <nav className="navBar">
@@ -57,7 +62,11 @@ const NavBar = () => {
           {data.map((item, key) => {
             return (
               <li key={key} className="navbar-container-menu-item">
-                <Link className="navbar-container-menu-item-links" to={item.to}>
+                <Link
+                  className="navbar-container-menu-item-links"
+                  to={item.to}
+                  onClick={closeMenu} // <-- ADD THIS
+                >
                   {item.label}
                 </Link>
               </li>
